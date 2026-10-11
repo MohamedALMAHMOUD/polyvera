@@ -43,7 +43,7 @@
     <b style="--x:50%;--y:10%;--d:-5s">∞</b><b style="--x:94%;--y:46%;--d:-8s">؟</b>
     <b style="--x:3%;--y:48%;--d:-4s">✉</b>
   </div>
-  <p class="eyebrow reveal"><span class="dot"></span> Société mère · 4 plateformes · 1 mission</p>
+  <p class="eyebrow reveal"><span class="dot"></span> Société mère · <span data-sites-count>4</span> plateformes · 1 mission</p>
   <h1 class="reveal">Le numérique<br>qui <em>simplifie</em> la vie.</h1>
   <p class="lead reveal">Polyvera conçoit des services digitaux utiles et accessibles : pour <strong>apprendre</strong>, <strong>s'intégrer</strong>, <strong>comprendre</strong> et <strong>se faire comprendre</strong>.</p>
   <div class="cta reveal">
@@ -51,12 +51,7 @@
     <a class="btn ghost" href="#valeurs">Notre approche</a>
   </div>
 
-  <ul class="orbit reveal" aria-label="Nos plateformes">
-    <li><a href="https://cabanemaths.fr" target="_blank" rel="noopener" style="--c:#fbbf24">cabanemaths.fr</a></li>
-    <li><a href="https://coupducode.fr" target="_blank" rel="noopener" style="--c:#34d399">coupducode.fr</a></li>
-    <li><a href="https://hirondelles.org" target="_blank" rel="noopener" style="--c:#38bdf8">hirondelles.org</a></li>
-    <li><a href="https://tradiexpress.fr" target="_blank" rel="noopener" style="--c:#f472b6">tradiexpress.fr</a></li>
-  </ul>
+  <ul class="orbit reveal" id="orbit" aria-label="Nos plateformes"></ul>
   <a class="scroll" href="#univers" aria-label="Défiler"><span></span></a>
 </section>
 
@@ -64,105 +59,11 @@
 <section class="section" id="univers">
   <div class="head reveal">
     <p class="kicker">Notre univers</p>
-    <h2>Quatre plateformes,<br>une même exigence de <em>clarté</em>.</h2>
+    <h2>Des plateformes,<br>une même exigence de <em>clarté</em>.</h2>
     <p>Chaque service répond à un besoin concret, avec des outils pensés pour être compris dès la première visite.</p>
   </div>
 
-  <div class="cards">
-
-    <!-- Cabane à Maths -->
-    <article class="card reveal" style="--c:#fbbf24;--c2:#f97316">
-      <div class="visual maths" aria-hidden="true">
-        <svg viewBox="0 0 240 150">
-          <path d="M40 120 120 36l80 84z" fill="rgba(251,191,36,.12)" stroke="#fbbf24" stroke-width="3" stroke-linejoin="round"/>
-          <rect x="62" y="82" width="116" height="38" rx="3" fill="rgba(251,191,36,.08)" stroke="#fbbf24" stroke-width="3"/>
-          <rect x="106" y="92" width="28" height="28" rx="14 14 0 0" fill="#fbbf24" opacity=".8"/>
-          <text x="120" y="76" text-anchor="middle" font-family="Fraunces,serif" font-size="26" fill="#fff">x² + y² = z²</text>
-        </svg>
-      </div>
-      <div class="body">
-        <span class="tag">Éducation · Mathématiques</span>
-        <h3>Cabane à Maths</h3>
-        <p>Apprendre les mathématiques facilement, avec des explications claires, des méthodes visuelles et des exercices pour progresser à son rythme.</p>
-        <ul>
-          <li>Cours et méthodes accessibles</li>
-          <li>Exercices et activités ludiques</li>
-          <li>Pour le collège et le lycée</li>
-        </ul>
-        <a class="visit" href="https://cabanemaths.fr" target="_blank" rel="noopener">cabanemaths.fr <span aria-hidden="true">↗</span></a>
-      </div>
-    </article>
-
-    <!-- Coup du Code -->
-    <article class="card reveal" style="--c:#34d399;--c2:#06b6d4">
-      <div class="visual code" aria-hidden="true">
-        <svg viewBox="0 0 240 150">
-          <circle cx="120" cy="75" r="46" fill="rgba(52,211,153,.1)" stroke="#34d399" stroke-width="3"/>
-          <circle cx="120" cy="75" r="36" fill="none" stroke="#ef4444" stroke-width="6" opacity=".9"/>
-          <path d="M100 75h40" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
-          <text x="120" y="140" text-anchor="middle" font-family="'Noto Naskh Arabic',serif" font-size="20" fill="#d1fae5">قانون السير</text>
-        </svg>
-      </div>
-      <div class="body">
-        <span class="tag">Code de la route · Arabophones</span>
-        <h3>Coup du Code</h3>
-        <p>Simplifier l'apprentissage du code de la route pour les migrants arabophones en France, grâce à des contenus adaptés et une application Android.</p>
-        <ul>
-          <li>Apprentissage adapté à l'arabe</li>
-          <li>Application Android « Coup du Code »</li>
-          <li>Entraînement pas à pas à l'examen</li>
-        </ul>
-        <a class="visit" href="https://coupducode.fr" target="_blank" rel="noopener">coupducode.fr <span aria-hidden="true">↗</span></a>
-      </div>
-    </article>
-
-    <!-- Hirondelles -->
-    <article class="card reveal" style="--c:#38bdf8;--c2:#6366f1">
-      <div class="visual hiron" aria-hidden="true">
-        <svg viewBox="0 0 240 150">
-          <path d="M20 100c30-8 55-32 80-56 6 14 16 22 32 24 24-22 52-30 88-22-30 6-46 22-60 44-4 8-12 12-22 12-14 0-20-10-30-4-24 14-50 14-88 2z" fill="rgba(56,189,248,.14)" stroke="#38bdf8" stroke-width="3" stroke-linejoin="round"/>
-          <path d="M100 44c-6-14-2-26 10-34" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="118" cy="62" r="3.2" fill="#fff"/>
-        </svg>
-      </div>
-      <div class="body">
-        <span class="tag">Vie administrative &amp; sociale</span>
-        <h3>Hirondelles</h3>
-        <p>Simplifier la vie administrative et sociale des personnes migrantes en France : comprendre ses droits, ses démarches et trouver les bonnes ressources.</p>
-        <ul>
-          <li>Guides de démarches pas à pas</li>
-          <li>Information claire sur les droits</li>
-          <li>Orientation vers les bons interlocuteurs</li>
-        </ul>
-        <a class="visit" href="https://hirondelles.org" target="_blank" rel="noopener">hirondelles.org <span aria-hidden="true">↗</span></a>
-      </div>
-    </article>
-
-    <!-- Tradiexpress -->
-    <article class="card reveal" style="--c:#f472b6;--c2:#a855f7">
-      <div class="visual trad" aria-hidden="true">
-        <svg viewBox="0 0 240 150">
-          <rect x="34" y="34" width="86" height="64" rx="12" fill="rgba(244,114,182,.14)" stroke="#f472b6" stroke-width="3"/>
-          <rect x="120" y="58" width="86" height="64" rx="12" fill="rgba(168,85,247,.16)" stroke="#a855f7" stroke-width="3"/>
-          <text x="77" y="76" text-anchor="middle" font-family="Fraunces,serif" font-size="30" font-weight="700" fill="#fff">A</text>
-          <text x="163" y="102" text-anchor="middle" font-family="'Noto Naskh Arabic',serif" font-size="32" font-weight="700" fill="#fff">ع</text>
-          <path d="M92 118c10 8 24 8 34 0" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div class="body">
-        <span class="tag">Traduction assermentée</span>
-        <h3>Tradiexpress</h3>
-        <p>La plateforme qui met en relation des traducteurs assermentés et leurs clients, pour des traductions officielles fiables, rapides et sans complication.</p>
-        <ul>
-          <li>Traducteurs assermentés vérifiés</li>
-          <li>Mise en relation simple et directe</li>
-          <li>Documents officiels et administratifs</li>
-        </ul>
-        <a class="visit" href="https://tradiexpress.fr" target="_blank" rel="noopener">tradiexpress.fr <span aria-hidden="true">↗</span></a>
-      </div>
-    </article>
-
-  </div>
+  <div class="cards" id="cards"></div>
 </section>
 
 <!-- CHIFFRES -->
@@ -172,7 +73,7 @@
     <h2>Polyvera, c'est…</h2>
   </div>
   <div class="grid4">
-    <div class="stat reveal"><strong data-count="4">0</strong><span>plateformes pour des besoins concrets</span></div>
+    <div class="stat reveal"><strong data-count="4" data-sites-count>0</strong><span>plateformes pour des besoins concrets</span></div>
     <div class="stat reveal"><strong data-count="3">0</strong><span>grands domaines : éducation, intégration, langues</span></div>
     <div class="stat reveal"><strong data-count="2">0</strong><span>langues au cœur de nos contenus : français et arabe</span></div>
     <div class="stat reveal"><strong data-count="1">0</strong><span>application mobile Android : Coup du Code</span></div>
@@ -198,12 +99,7 @@
   <div class="final reveal">
     <h2>Prêt à découvrir<br>nos <em>services</em> ?</h2>
     <p>Choisissez la plateforme qui répond à votre besoin.</p>
-    <div class="chips">
-      <a href="https://cabanemaths.fr" target="_blank" rel="noopener" style="--c:#fbbf24">Cabane à Maths</a>
-      <a href="https://coupducode.fr" target="_blank" rel="noopener" style="--c:#34d399">Coup du Code</a>
-      <a href="https://hirondelles.org" target="_blank" rel="noopener" style="--c:#38bdf8">Hirondelles</a>
-      <a href="https://tradiexpress.fr" target="_blank" rel="noopener" style="--c:#f472b6">Tradiexpress</a>
-    </div>
+    <div class="chips" id="chips"></div>
   </div>
 </section>
 
@@ -211,15 +107,11 @@
 
 <footer class="footer">
   <div><strong>Polyvera</strong> · Le numérique qui simplifie la vie.</div>
-  <div class="links">
-    <a href="https://cabanemaths.fr" target="_blank" rel="noopener">Cabane à Maths</a>
-    <a href="https://coupducode.fr" target="_blank" rel="noopener">Coup du Code</a>
-    <a href="https://hirondelles.org" target="_blank" rel="noopener">Hirondelles</a>
-    <a href="https://tradiexpress.fr" target="_blank" rel="noopener">Tradiexpress</a>
-  </div>
+  <div class="links" id="footer-links"></div>
   <small>© <span id="year">2026</span> Polyvera. Tous droits réservés.</small>
 </footer>
 
+<script src="sites.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

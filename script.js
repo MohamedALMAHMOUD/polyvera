@@ -3,6 +3,32 @@
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // Génération de la page à partir de sites.js
+  const sites = window.SITES || [];
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const ext = 'target="_blank" rel="noopener"';
+  const host = u => u.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+  const col = s => `--c:${esc(s.color || '#7c5cff')};--c2:${esc(s.color2 || s.color || '#22d3ee')}`;
+  const fallback = s => `<svg viewBox="0 0 240 150"><circle cx="120" cy="75" r="46" fill="none" stroke="var(--c)" stroke-width="3"/><text x="120" y="92" text-anchor="middle" font-family="Fraunces,serif" font-size="52" font-weight="700" fill="#fff">${esc(s.name.charAt(0))}</text></svg>`;
+
+  $('#cards').innerHTML = sites.map(s => `
+    <article class="card reveal" style="${col(s)}">
+      <div class="visual" aria-hidden="true">${s.svg || fallback(s)}</div>
+      <div class="body">
+        <span class="tag">${esc(s.tag || '')}</span>
+        <h3>${esc(s.name)}</h3>
+        <p>${esc(s.desc || '')}</p>
+        <ul>${(s.points || []).map(p => `<li>${esc(p)}</li>`).join('')}</ul>
+        <a class="visit" href="${esc(s.url)}" ${ext}>${esc(host(s.url))} <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>`).join('');
+  $('#orbit').innerHTML = sites.map(s => `<li><a href="${esc(s.url)}" ${ext} style="--c:${esc(s.color)}">${esc(host(s.url))}</a></li>`).join('');
+  $('#chips').innerHTML = sites.map(s => `<a href="${esc(s.url)}" ${ext} style="--c:${esc(s.color)}">${esc(s.name)}</a>`).join('');
+  $('#footer-links').innerHTML = sites.map(s => `<a href="${esc(s.url)}" ${ext}>${esc(s.name)}</a>`).join('');
+  $$('[data-sites-count]').forEach(el => {
+    if ('count' in el.dataset) el.dataset.count = sites.length; else el.textContent = sites.length;
+  });
+
   // Nav: état au scroll + menu mobile
   const nav = $('#nav'), burger = $('#burger'), menu = $('#menu');
   const onScroll = () => nav.classList.toggle('scrolled', scrollY > 24);
